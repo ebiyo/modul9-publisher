@@ -18,3 +18,5 @@ Url tersebut adalan url broker AMQP yang menunjuk pada RabbitMQ. Publisher akan 
 ### > Menjalankan ```cargo run``` pada subscriber dan publisher
 ![Cargo run on both publisher and subscriber](image-1.png)
 Setiap kali publisher di run, ia akan mengirimkan 5 event ke message broker (RabbitMQ) yang nantinya akan diproses oleh subscriber.
+
+Dari gambar yang sama, dapat dilikat bahwa ada lonjakan atau spike pada publish dan consumer. Hal ini disebabkan oleh aktivitas yang sudah disebutkan sebelumnya, yaitu publisher (kuning) mengirimkan event ke RabbitMQ dan consumer atau subscriber (ungu) memproses event tersebut. Setiap kali dilakukan ```cargo run``` pada publisher, akan terjadi lonjakan pada chart.
